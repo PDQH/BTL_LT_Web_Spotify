@@ -19,7 +19,6 @@ const mainView = $('#root__main-view')
 const rootTop = $('#root__top-container')
 const nowPlaying = $('#root__now-playing')
 const friendsIcon = $('#responsive-friends')
-const friendsBar = $('#root__right-sidebar')
 const playlistPage = $('#on-open-playlist')
 const homeBtn = $('#root__left-sidebar__navigation__home')
 const queuePage = $('#queue')
@@ -1324,49 +1323,7 @@ const app = {
       this.handleBtns.handlePlayBtn.handle()
     }
   },
-  // handleRightSidebar: {
-  //   renderUsers: function() {
-  //     $('#root__right-sidebar__users').innerHTML = allUsers.map(user => {
-  //       const song = allSongs.filter(song => song.id == user.latestSongID)[0];
-  //       return `
-  //       <div class="root__right-sidebar__user" user-id=${user.id}>
-  //         <div class="root__right-sidebar__user__avatar">
-  //           <img class="avatar" src="${user.avatarPath}">
-  //           <img src="./assets/images/right-sidebar/play.png" class="play-btn" song-id="${user.latestSongID}">
-  //         </div>
-  //         <div class="root__right-sidebar__user__user-content">
-  //           <div class="user-name-and-activity">
-  //             <span class='user-name'>${user.name}</span>
-  //             <div class="user-activity">
-  //               ${user.lastActive == 'online' ? `<img src="./assets/images/right-sidebar/listening.png">` : user.lastActive}
-  //             </div>
-  //           </div>
-  //           <div class='user-music'>
-  //             <div class='user-music__song'><span class="user-music__song__name">${song.name}</span><img src="./assets/images/right-sidebar/dot.png"><span class="user-music__song__artist">${song.artist}</span></div>
-  //             <div class='user-music__owner'><img src="./assets/images/right-sidebar/playlist.png">${song.album}</div>
-  //           </div>
-  //         </div>
-  //       </div>`
-  //     }).join('')
-  //   },
-  //   handleListenAlong: function() {
-  //     const users = Array.from($('#root__right-sidebar__users').querySelectorAll('.root__right-sidebar__user'));
-  //     users.forEach(user => {
-  //       const playBtn = user.querySelector('.play-btn')
-  //       playBtn.onclick = function() {
-  //         app.playSongs.songs = [allSongs.filter(song => song.id == playBtn.getAttribute('song-id'))[0]];
-  //         app.playSongs.id = playBtn.getAttribute('song-id');
-  //         app.playSongs.currentIndex = 0;
-  //         app.playSongs.start();
-  //         audio.play();
-  //       }
-  //     })
-  //   },
-  //   start: function() {
-  //     this.renderUsers();
-  //     this.handleListenAlong();
-  //   }
-  // },
+
   handleNavigation: {
     isAtHome: true,
     trace: [[mainView]],
@@ -1491,7 +1448,6 @@ const app = {
     this.handlePlaylistPage.start()
     this.handleQueuePage.start()
     this.handleMainView.start()
-    // this.handleRightSidebar.start()
     this.handleNavigation.handleBtns.start()
     this.handleNowPlaying.openNowPlayingPage()
     this.resize()

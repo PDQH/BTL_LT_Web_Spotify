@@ -786,29 +786,6 @@ html * {
     display: block;
     overflow: hidden
 }
-
-.root__right-sidebar__user__user-content > .user-name-and-activity > .user-activity > img {
-    width: 12px;
-}
-
-.root__right-sidebar__user__user-content > .user-music, .root__right-sidebar__user__user-content > .user-name-and-activity > .user-activity {
-    font-size: 11px;
-    font-weight: 500;
-}
-
-.root__right-sidebar__user__user-content > .user-music > .user-music__song  img {
-    width: 4px;
-    margin: 4px; 
-}
-
-.root__right-sidebar__user__user-content > .user-music > .user-music__owner > img {
-    width: 16px;
-    position: relative;
-    top: 3px;
-    margin-right: 2px;
-    color: #f01919;
-}   
-
 #root__now-playing {
     background-color: #181818;
     grid-area: now-playing;
