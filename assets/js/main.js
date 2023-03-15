@@ -19,6 +19,7 @@ const mainView = $('#root__main-view')
 const rootTop = $('#root__top-container')
 const nowPlaying = $('#root__now-playing')
 const friendsIcon = $('#responsive-friends')
+const friendsBar = $('#root__right-sidebar')
 const playlistPage = $('#on-open-playlist')
 const homeBtn = $('#root__left-sidebar__navigation__home')
 const queuePage = $('#queue')
@@ -137,7 +138,7 @@ const app = {
         const head = document.querySelector('head')
         const link = document.createElement('link')
         link.setAttribute('rel',"stylesheet")
-        link.setAttribute('href',"./assets/css/playbackSlider.css")
+        link.setAttribute('href',"./assets/css/play_back_Slider.css")
         link.setAttribute('id',"slidercss")
         head.appendChild(link)
   
@@ -213,7 +214,7 @@ const app = {
         const head = document.querySelector('head')
         const link = document.createElement('link')
         link.setAttribute('rel',"stylesheet")
-        link.setAttribute('href',"./assets/css/volumeSlider.css")
+        link.setAttribute('href',"./assets/css/volume_Slider.css")
         link.setAttribute('id',"slidercss")
         head.appendChild(link)
   
@@ -398,7 +399,7 @@ const app = {
       audio.onpause = function() {
         _this.isPlaying = false;
         playBtn.src = `./assets/images/now-playing/play.PNG`
-        $('title').innerText = `Spotify - Made by Phuc1403`
+        $('title').innerText = `Spotify - Nghe nhạc trực tuyến`
 
         handleButtons()
       }
@@ -652,7 +653,7 @@ const app = {
               <div id="on-open-playlist__header__title__name">${thisPlaylistInDB.name}</div>
               <div id="on-open-playlist__header__title__description">${thisPlaylistInDB.description}</div>
               <div id="on-open-playlist__header__title__playlist-info">
-                ${thisPlaylistInDB.tag.includes('own playlist') ? '<img id="on-open-playlist__header__title__playlist-info__img" src="./assets/images/user/user-avatar.jpg"><span id="on-open-playlist__header__title__playlist-info__owner">' + thisPlaylistInDB.owner : '<span id="on-open-playlist__header__title__playlist-info__owner"><span>Made for</span> Phuc'} <span>• ${thisPlaylistInDB.songs.length} songs</span></span>
+                ${thisPlaylistInDB.tag.includes('own playlist') ? '<img id="on-open-playlist__header__title__playlist-info__img" src="./assets/images/user/img_user_phamhuy.jpg"><span id="on-open-playlist__header__title__playlist-info__owner">' + thisPlaylistInDB.owner : '<span id="on-open-playlist__header__title__playlist-info__owner"><span>Made for</span> Phuc'} <span>• ${thisPlaylistInDB.songs.length} songs</span></span>
                 </div>
             </div>
           </div>
@@ -1066,7 +1067,7 @@ const app = {
       const _this = this
       $('#queue__header__close').onclick = function() {
         _this.closeQueuePage()
-          document.getElementById('root__now-playing').style.zIndex = '5'
+          document.getElementById('root__now_playing').style.zIndex = '5'
           document.getElementById('root__left-sidebar').style.zIndex = '10'
       }
       
@@ -1127,7 +1128,7 @@ const app = {
           const head = document.querySelector('head')
           const link = document.createElement('link')
           link.setAttribute('rel',"stylesheet")
-          link.setAttribute('href',"./assets/css/now-playing.css")
+          link.setAttribute('href',"./assets/css/now_playing.css")
           link.setAttribute('id',"nowPlaying")
           head.appendChild(link)
         }

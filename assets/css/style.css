@@ -145,9 +145,9 @@ html * {
     overflow: hidden;
     display: grid;
     grid-template-areas:
-        'left-sidebar main right-sidebar'
-        'now-playing now-playing now-playing';
-    grid-template-columns: 200px auto 250px; 
+        'left-sidebar main'
+        'now-playing now-playing';
+    grid-template-columns: 200px auto; 
     grid-template-rows: auto 90px;  
 }
 
@@ -225,7 +225,8 @@ html * {
 
 #root__top__user {
     border-radius: 23px;
-    height: 28px;
+    height: 32px;
+    gap: 8px;
     min-width: 98px;
     background-color:#12110c;
     padding: 2px;
@@ -429,8 +430,7 @@ html * {
     grid-area: main;
     padding: 24px 32px 0px;
     overflow: overlay;
-    height: 100%;
-    width: 128%;
+    height: 90%;
     background-attachment: local;
     background-image: linear-gradient(var(--backgroundColor) 0%, #121212 15%);
     transition: --backgroundColor 0.5s;
@@ -1233,39 +1233,7 @@ html * {
         display: block;
         width: 30px;
     }
-    #root__right-sidebar {
-        position: fixed;
-        z-index: 1;
-        top: 0px;
-        right: 0px;
-        width: 250px;
-        height: 100%;
-        transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        -moz-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        -o-transform: translateX(100%);
-    }
-    #root__right-sidebar__friend-activity {
-        margin-top: 30px;
-    }
-    #root__right-sidebar__users {
-        margin-top: 20px;
-        margin-bottom: 80px;
-    }
-    #root__right-sidebar {
-        position: fixed;
-        z-index: 1;
-        top: 0px;
-        right: 0px;
-        width: 250px;
-        height: 100%;
-        transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        -moz-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        -o-transform: translateX(100%);
-}
+    
     #root__main-view__responsive-nav {
         display: flex;
         align-items: center;
@@ -1302,8 +1270,6 @@ html * {
         position: absolute;
         right: 0;
     }
-
-
 
 
     #root__left-sidebar {
