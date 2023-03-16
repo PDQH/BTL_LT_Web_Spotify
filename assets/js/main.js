@@ -1181,15 +1181,15 @@ const app = {
             friendsIcon.onclick = function() {
               if (!friendsBar.classList.contains('slideToLeft')) {friendsBar.classList.add('slideToLeft')}
             }
-            $('#root__main-view').onclick = function(e) {
-              if (friendsBar.classList.contains('slideToLeft')) {
-                if (e.target != friendsIcon && e.target != friendsBar) {
-                  friendsBar.classList.remove('slideToLeft')
-                  friendsBar.classList.add('reverseSlideToLeft')
-                  setTimeout(function() {friendsBar.classList.remove('reverseSlideToLeft')}, 300)
-                }
-              }
-            }
+            // $('#root__main-view').onclick = function(e) {
+            //   if (friendsBar.classList.contains('slideToLeft')) {
+            //     if (e.target != friendsIcon && e.target != friendsBar) {
+            //       friendsBar.classList.remove('slideToLeft')
+            //       friendsBar.classList.add('reverseSlideToLeft')
+            //       setTimeout(function() {friendsBar.classList.remove('reverseSlideToLeft')}, 300)
+            //     }
+            //   }
+            // }
           }
         },
 
