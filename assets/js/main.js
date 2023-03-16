@@ -1221,11 +1221,11 @@ const app = {
 
       mainViewOnScroll: function() {
         mainView.addEventListener('scroll', function() {
-          if (friendsBar.classList.contains('slideToLeft')) {
-            friendsBar.classList.remove('slideToLeft')
-            friendsBar.classList.add('reverseSlideToLeft')
-            setTimeout(function() {friendsBar.classList.remove('reverseSlideToLeft')}, 300)      
-          } 
+          // if (friendsBar.classList.contains('slideToLeft')) {
+          //   friendsBar.classList.remove('slideToLeft')
+          //   friendsBar.classList.add('reverseSlideToLeft')
+          //   setTimeout(function() {friendsBar.classList.remove('reverseSlideToLeft')}, 300)      
+          // } 
         })
       },
       handle: function() {
@@ -1248,7 +1248,7 @@ const app = {
                   <li class="drop-bar-item"><span>Account</span><img src="assets/images/top-container/share.png"></li>
                   <li class="drop-bar-item"><span>Profile</span></li>
                   <li class="drop-bar-item"><span>Log out</span></li>`
-              dropBar.style.right = `${friendsBar.offsetWidth + 32}px`
+              //dropBar.style.right = `${friendsBar.offsetWidth + 32}px`
               userBox.appendChild(dropBar)
           }
         }
