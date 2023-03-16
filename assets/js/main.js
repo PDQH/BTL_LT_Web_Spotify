@@ -19,7 +19,7 @@ const mainView = $('#root__main-view')
 const rootTop = $('#root__top-container')
 const nowPlaying = $('#root__now-playing')
 const friendsIcon = $('#responsive-friends')
-const friendsBar = $('#root__right-sidebar')
+//const friendsBar = $('#root__right-sidebar')
 const playlistPage = $('#on-open-playlist')
 const homeBtn = $('#root__left-sidebar__navigation__home')
 const queuePage = $('#queue')
@@ -482,7 +482,7 @@ const app = {
     },
     handleOwnPlaylists: {
       renderOwnPlaylists: function() {
-        const ownPlaylists = app.handlePlaylists.playlists.filter(playlist => !playlist.tag.includes('liked songs') && playlist.owner == 'Phuc')
+        const ownPlaylists = app.handlePlaylists.playlists.filter(playlist => !playlist.tag.includes('liked songs') && playlist.owner == 'Phạm Huy')
           .map(playlist => `
             <li class="my-playlist is-a-playlist" playlist-id="${playlist.id}"><span>${playlist.name}</span><img class="playing-playlist" src="./assets/images/now-playing/volume-big.PNG"></li>
           `).join('')
@@ -653,7 +653,7 @@ const app = {
               <div id="on-open-playlist__header__title__name">${thisPlaylistInDB.name}</div>
               <div id="on-open-playlist__header__title__description">${thisPlaylistInDB.description}</div>
               <div id="on-open-playlist__header__title__playlist-info">
-                ${thisPlaylistInDB.tag.includes('own playlist') ? '<img id="on-open-playlist__header__title__playlist-info__img" src="./assets/images/user/img_user_phamhuy.jpg"><span id="on-open-playlist__header__title__playlist-info__owner">' + thisPlaylistInDB.owner : '<span id="on-open-playlist__header__title__playlist-info__owner"><span>Made for</span> Phuc'} <span>• ${thisPlaylistInDB.songs.length} songs</span></span>
+                ${thisPlaylistInDB.tag.includes('own playlist') ? '<img id="on-open-playlist__header__title__playlist-info__img" src="./assets/images/user/img_user_phamhuy.jpg"><span id="on-open-playlist__header__title__playlist-info__owner">' + thisPlaylistInDB.owner : '<span id="on-open-playlist__header__title__playlist-info__owner"><span>Made for</span> Phạm Huy'} <span>• ${thisPlaylistInDB.songs.length} songs</span></span>
                 </div>
             </div>
           </div>
