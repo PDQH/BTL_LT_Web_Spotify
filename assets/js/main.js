@@ -19,12 +19,10 @@ const mainView = $('#root__main-view')
 const rootTop = $('#root__top-container')
 const nowPlaying = $('#root__now-playing')
 const friendsIcon = $('#responsive-friends')
-//const friendsBar = $('#root__right-sidebar')
 const playlistPage = $('#on-open-playlist')
 const homeBtn = $('#root__left-sidebar__navigation__home')
 const queuePage = $('#queue')
 const playlistsSections = $('#sections')
-
 
 const app = {
   playSongs: { 
