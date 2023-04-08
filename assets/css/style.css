@@ -223,6 +223,47 @@ html * {
     -o-transition: 0.5s ease;
 }
 
+#account-box{
+    margin-right: 40px;
+}
+
+#btn-sign-up{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6a6a6a;
+    padding: 8px 32px 8px 8px;
+}
+
+#btn-sign-up:hover{
+    color: #fff;
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+#btn-login{
+    border-radius: 500px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+#btn-login span{
+    display: flex;
+    padding: 13px 44px;
+    border: none;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#btn-login span:hover{
+    transform: scale(1.04);
+}
+
 #root__top__user {
     border-radius: 23px;
     height: 32px;
@@ -230,7 +271,7 @@ html * {
     min-width: 98px;
     background-color:#12110c;
     padding: 2px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     margin-right: 32px;
