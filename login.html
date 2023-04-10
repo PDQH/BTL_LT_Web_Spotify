@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="/assets/css/login.css">
     <title>Login - Spotify</title>
 </head>
 <body>
@@ -29,14 +29,15 @@
                     </div>
                     <form action="">
                         <div class="input-box style-background">
-                            <input type="text" autofocus placeholder="Username">
+                            <input id="username" type="text" autofocus placeholder="Username">
                         </div>
                         <div class="input-box style-background">
-                            <input type="password" placeholder="Password">
+                            <input id="password" type="password" placeholder="Password">
+                            <span class="show-password" for="password"><i class="fa-solid fa-eye"></i></span>
                         </div>
                         <a href="#" class="forget">Forgot your password ?</a>
                         <div class="input-box">
-                            <button type="submit">Login</button>
+                            <button type="button" id="btn-login">Login</button>
                         </div>
                         <div class="sign-up-box">
                             <h2>Don't have an account?</h2>
@@ -47,5 +48,6 @@
             </div>
         </div>
     </section>
+    <script src="/assets/js/login.js"></script>
 </body>
 </html>

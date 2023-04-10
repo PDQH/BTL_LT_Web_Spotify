@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     <link rel="stylesheet" href="/assets/css/signup.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
     <title>Sign up - Spotify</title>
 </head>
 <body>
@@ -29,16 +31,17 @@
                     </div>
                     <form action="">
                         <div class="input-box style-background">
-                            <input type="text" autofocus placeholder="Enter username">
+                            <input id="username-signup" type="text" autofocus placeholder="Enter username">
                         </div>
                         <div class="input-box style-background">
-                            <input type="text" placeholder="Create a password">
+                            <input id="password-signup" type="password" placeholder="Create a password">
+                            <span class="show-password"><i class="fa-solid fa-eye"></i></span>
                         </div>
-                        <div class="input-box style-background">
+                        <!-- <div class="input-box style-background">
                             <input type="text" placeholder="Confirm password">
-                        </div>
+                        </div> -->
                         <div class="input-box">
-                            <button type="submit">Sign up</button>
+                            <button id="btn-signup" type="button">Sign up</button>
                         </div>
                         <div class="sign-up-box">
                             <p>I have an account! <a href="/login.html">Login</a>.</p>
@@ -48,5 +51,6 @@
             </div>
         </div>
     </section>
+    <script src="/assets/js/signup.js"></script>
 </body>
 </html>

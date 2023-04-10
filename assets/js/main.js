@@ -1179,15 +1179,15 @@ const app = {
             friendsIcon.onclick = function() {
               if (!friendsBar.classList.contains('slideToLeft')) {friendsBar.classList.add('slideToLeft')}
             }
-            // $('#root__main-view').onclick = function(e) {
-            //   if (friendsBar.classList.contains('slideToLeft')) {
-            //     if (e.target != friendsIcon && e.target != friendsBar) {
-            //       friendsBar.classList.remove('slideToLeft')
-            //       friendsBar.classList.add('reverseSlideToLeft')
-            //       setTimeout(function() {friendsBar.classList.remove('reverseSlideToLeft')}, 300)
-            //     }
-            //   }
-            // }
+            $('#root__main-view').onclick = function(e) {
+              if (friendsBar.classList.contains('slideToLeft')) {
+                if (e.target != friendsIcon && e.target != friendsBar) {
+                  friendsBar.classList.remove('slideToLeft')
+                  friendsBar.classList.add('reverseSlideToLeft')
+                  setTimeout(function() {friendsBar.classList.remove('reverseSlideToLeft')}, 300)
+                }
+              }
+            }
           }
         },
 
@@ -1451,6 +1451,26 @@ const app = {
     this.handleNowPlaying.openNowPlayingPage()
     this.resize()
   }
+
+}
+const loggedIn = localStorage.getItem('loggedIn');
+
+function updateUI() {
+  const userInfor = document.querySelector('#root__top__user')
+  const loginButton = document.querySelector('#account-box');
+
+  if (loggedIn == 'true') {
+    // Nếu loggedIn là true, ẩn nút đăng nhập và hiển thị nội dung đã đăng nhập
+    loginButton.style.display = 'none';
+    userInfor.style.display = 'flex';
+    console.log('thành công')
+  } else {
+    // Ngược lại, hiển thị nút đăng nhập và ẩn nội dung đã đăng nhập
+    loginButton.style.display = 'flex';
+    userInfor.style.display = 'none';
+  }
 }
 
+// Gọi hàm updateUI khi trang web được load để xác định trạng thái của loggedIn
+updateUI();
 app.start()

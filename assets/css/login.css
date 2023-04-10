@@ -169,6 +169,7 @@ section .color:nth-child(3){
 }
 
 .form .input-box input, button{
+    position: relative;
     width: 100%;
     background-color: var(--rgba-02);
     border: none;
@@ -179,6 +180,28 @@ section .color:nth-child(3){
     color: var(--main-color-wh);
     caret-color: var(--main-color-gr);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form .input-box #password{
+    padding-right: 40px;
+}
+
+.form .input-box .show-password{
+    position: absolute;
+    right: 11px;
+    top: 10px;
+    opacity: 0.6;
+    color: var(--main-color-wh);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.form .input-box .show-password:hover{
+    opacity: 1;
+}
+
+.form .input-box span i.hide-password::before{
+    content: '\f070';
 }
 
 .form .input-box input:focus{
