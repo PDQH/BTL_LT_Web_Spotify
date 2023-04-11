@@ -20,6 +20,7 @@ const rootTop = $('#root__top-container')
 const nowPlaying = $('#root__now-playing')
 const friendsIcon = $('#responsive-friends')
 const playlistPage = $('#on-open-playlist')
+const friendsBar = $('#friendsBar')
 const homeBtn = $('#root__left-sidebar__navigation__home')
 const queuePage = $('#queue')
 const playlistsSections = $('#sections')
@@ -1175,16 +1176,20 @@ const app = {
         },
         handleTopContainerWidth: function() {window.outerWidth > 1115 ? rootTop.style.width = mainView.offsetWidth + 'px' : rootTop.style.width = mainView.offsetWidth + 250 + 'px'},
         handleResponsiveBar: function() {                               
-          if (friendsIcon) {
+          if (friendsIcon && friendsBar) {
             friendsIcon.onclick = function() {
-              if (!friendsBar.classList.contains('slideToLeft')) {friendsBar.classList.add('slideToLeft')}
+              if (!friendsBar.classList.contains('slideToLeft')) {
+                friendsBar.classList.add('slideToLeft')
+              }
             }
             $('#root__main-view').onclick = function(e) {
               if (friendsBar.classList.contains('slideToLeft')) {
                 if (e.target != friendsIcon && e.target != friendsBar) {
                   friendsBar.classList.remove('slideToLeft')
                   friendsBar.classList.add('reverseSlideToLeft')
-                  setTimeout(function() {friendsBar.classList.remove('reverseSlideToLeft')}, 300)
+                  setTimeout(function() {
+                    friendsBar.classList.remove('reverseSlideToLeft')
+                  }, 300)
                 }
               }
             }
@@ -1245,9 +1250,17 @@ const app = {
               dropBar.innerHTML = `
                   <li class="drop-bar-item"><span>Account</span><img src="assets/images/top-container/share.png"></li>
                   <li class="drop-bar-item"><span>Profile</span></li>
-                  <li class="drop-bar-item"><span>Log out</span></li>`
+                  <li class="drop-bar-item js-logout"><span>Log out</span></li>`
               //dropBar.style.right = `${friendsBar.offsetWidth + 32}px`
               userBox.appendChild(dropBar)
+
+              //Đăng xuất tài khoản
+              $('.js-logout').onclick = function() {
+                localStorage.removeItem('loggedIn')
+                window.location.reload()
+                // Perform logout operation here
+                console.log('User has logged out');
+              }
           }
         }
       },
@@ -1459,18 +1472,16 @@ function updateUI() {
   const userInfor = document.querySelector('#root__top__user')
   const loginButton = document.querySelector('#account-box');
 
-  if (loggedIn == 'true') {
-    // Nếu loggedIn là true, ẩn nút đăng nhập và hiển thị nội dung đã đăng nhập
+  if (loggedIn === 'true') {
+    // Nếu loggedIn là true, ẩn nút đăng ký và đăng nhập và hiển thị tên người dùng
     loginButton.style.display = 'none';
     userInfor.style.display = 'flex';
-    console.log('thành công')
   } else {
-    // Ngược lại, hiển thị nút đăng nhập và ẩn nội dung đã đăng nhập
+    // Ngược lại, hiển thị nút đăng nhập và ẩn tên người dùng
     loginButton.style.display = 'flex';
     userInfor.style.display = 'none';
   }
 }
-
 // Gọi hàm updateUI khi trang web được load để xác định trạng thái của loggedIn
 updateUI();
 app.start()
