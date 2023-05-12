@@ -25,7 +25,7 @@ btnLogin.addEventListener("click", (e) => {
             )
             if (user) {
                 localStorage.setItem('loggedIn', 'true');
-                window.location.href = "index.html"
+                window.location.href = "main.html"
                 updateUI();
             }else{
                 alert("Đăng nhập thất bại. Vui lòng kiểm tra lại Username hoặc Password.")

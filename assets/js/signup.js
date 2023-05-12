@@ -25,7 +25,7 @@ btnSignup.addEventListener("click", (e) => {
         })
         .then((res) => res.json()) //sử dụng phương thức json() để chuyển đổi phản hồi trả về thành một đối tượng JSON
         .then((data) => console.log(data))
-        window.location.assign("/login.html")
+        window.location.assign("/index.html")
         alert("Chúc mừng bạn đã đăng ký tài khoản thành công! Vui lòng ấn OK để đăng nhập.")
 
     }

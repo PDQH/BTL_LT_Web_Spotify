@@ -2,138 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="./assets/images/title.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/title.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Spotify - Nghe nhạc trực tuyến</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/play_list_&_Queue_Page.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="/assets/css/login.css">
+    <title>Login - Spotify</title>
 </head>
 <body>
-    <div id="root">
-        <div id="root__left-sidebar">
-            <img id="root__left-sidebar__logo" src="assets/images/left-sidebar/spotify.png">
-            <ul id="root__left-sidebar__navigation">
-                <li id="root__left-sidebar__navigation__home" class="current"><img src="./assets/images/left-sidebar/home-active.PNG"><span>Home</span></li>
-                <li id="root__left-sidebar__navigation__search" style="cursor: not-allowed;"><img src="./assets/images/left-sidebar/search.PNG"><span>Search</span></li>
-                <li id="root__left-sidebar__navigation__library" style="cursor: not-allowed;"><img src="./assets/images/left-sidebar/library.PNG"><span>Your library</span></li>
-            </ul>
-            <ul id="root__left-sidebar__action">
-                <li style="cursor: not-allowed;"><img src="./assets/images/left-sidebar/create-playlist.PNG">Create Playlist</li>
-                <li class="my-playlist is-a-playlist" playlist-id ="1"><img src="./assets/images/left-sidebar/liked-songs.PNG"><span>Liked Songs</span><img class="playing-playlist" src="./assets/images/now-playing/volume-big.PNG"></li>
-            </ul>
-            <div id="root__left-sidebar__dashline">
-                <hr/>
-                <div id="root__left-sidebar__dashline__shadow"></div>
-            </div>
-            <ul id="root__left-sidebar__my-playlists"></ul>
-        </div>
-        <div id="root__main-view">
-            <div id="root__top-container">
-                <div id="root__top__add-play-btn">
-                    <div id="root__top__move-action">
-                        <img class="root__top__move-action__prev" src="./assets/images/top-container/action.PNG" alt="">
-                        <img class="root__top__move-action__next" src="./assets/images/top-container/action.PNG" alt="">
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square style-background" style="--i:0;"></div>
+            <div class="square style-background" style="--i:1;"></div>
+            <div class="square style-background" style="--i:2;"></div>
+            <div class="square style-background" style="--i:3;"></div>
+            <div class="square style-background" style="--i:4;"></div>
+            <div class="container style-background">
+                <div class="form">
+                    <div class="logo">
+                        <a href=""><img src="/assets/images/login/Spotify_Logo_CMYK_Black.png" width="143px" height="44px"></a>
                     </div>
-                    <img id="root__top__add-play-btn__play-btn" src= './assets/images/main-view/play-now-playlist.PNG'>
-                    <span id="root__top__add-play-btn__playlist-name"></span>
-                </div>
-                <div id="account-box">
-                    <button type="button" onclick="location.assign('/signup.html')" id="btn-sign-up">Sign up</button>
-                    <button type="button" onclick="location.assign('/login.html')" id="btn-login"><span>Login</span></button>
-                </div>
-                <div id="root__top__user">
-                    <img src="./assets/images/user/img_user_phamhuy.JPG" id="root__top__user__avatar">
-                    <div id="root__top__user__name">Phạm Đoàn Qu...</div>
-                    <img id="root__top__user__drop-icon" src="assets/images/top-container/drop-icon.PNG">
-                </div>
-
-            </div>
-            <div id="root__main-view__currently-playing">
-                <div id="root__main-view__responsive-nav">
-                    <span class="greeting"></span>
-                    <img id="responsive-friends" src="./assets/images/responsive/friends.png">
-                </div>
-                <ul id="root__main-view__currently-playing__playlists"></ul>
-            </div>
-            
-            <div id="sections">
-            </div>
-                  
-            <div id="on-open-playlist"></div>
-            
-            <div id="queue">
-                <div id="queue__header">
-                    <img id="queue__header__close" src='./assets/images/main-view/close.png'>
-                    <span id="queue__header__playlist"></span>
-                </div>
-                <div id="queue-text">Queue</div>
-                <div id="queue__now-playing-text">Now playing</div>
-                <div id="queue__now-playing-song">
-                </div>
-                <div id="queue__next-up-text">Next up:</div>
-                <div id="queue__next-up-songs">
+                    <form action="">
+                        <div class="input-box style-background">
+                            <input id="username" type="text" autofocus placeholder="Username">
+                        </div>
+                        <div class="input-box style-background">
+                            <input id="password" type="password" placeholder="Password">
+                            <span class="show-password" for="password"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <a href="#" class="forget">Forgot your password ?</a>
+                        <div class="input-box">
+                            <button type="button" id="btn-login">Login</button>
+                        </div>
+                        <div class="sign-up-box">
+                            <h2>Don't have an account?</h2>
+                            <button type="button" onclick="location.assign('/signup.html');" class="sign-up">Sign up for Spotify</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div id="root__now-playing">
-            <div id="root__now-playing__header">
-                <img id="root__now-playing__header__minimize" src='./assets/images/now-playing/minimize.png'>
-                <span id="root__now-playing__header__playlist"></span>
-                <img id="root__now-playing__header__see-more" src='./assets/images/now-playing/see-more.png'>
-            </div>
-            <div id="root__now-playing__song">
-                <img id="root__now-playing__song__img" src=''>
-                <div id="root__now-playing__song__content">
-                    <div id="root__now-playing__song__info">
-                        <div id="root__now-playing__song__info__name"></div>
-                        <div id="root__now-playing__song__info__artist"></div>  
-                    </div>
-                    <img id="root__now-playing__song__favorite" src="./assets/images/now-playing/favorite.png">
-                    <img id="root__now-playing__song__overlay" src="./assets/images/now-playing/overlay.png" style="cursor: not-allowed;">    
-                </div>
-            </div>
-            <div id="root__now-playing__player-control">
-                <div id="root__now-playing__player-control__buttons">
-                    <div id="shuffle">
-                        <img class="player-control-shuffle-repeat shuffle" src="./assets/images/now-playing/shuffle.PNG">
-                        <img class="shuffle-active" src="./assets/images/now-playing/active-dot.png">
-                    </div>
-                    <img class="player-control-prev-next prev" src="./assets/images/now-playing/prev.png">
-                    <img class="player-control-play-pause" src="./assets/images/now-playing/play.PNG">
-                    <img class="player-control-prev-next next" src="./assets/images/now-playing/next.PNG">
-                    <div id="repeat">
-                        <img class="player-control-shuffle-repeat repeat" src="./assets/images/now-playing/repeat.PNG">
-                        <img class="repeat-active" src="./assets/images/now-playing/active-dot.png">
-                    </div>
-                    
-                </div>
-                <div id="root__now-playing__player-control__playback-bar">
-                    <div id="root__now-playing__player-control__playback-bar__minutes-played">0:00</div>
-                    <input id="root__now-playing__player-control__playback-bar__range-slider" min="0" max="100" type="range" value = "0"/>
-                    <div id="root__now-playing__speed-control__playback-bar__minutes-total"></div>
-                    
-                </div>
-            </div>
-            <div id="root__now-playing__media-control">
-                <div id="list">
-                    <img class="media-control list" src="./assets/images/now-playing/list.PNG">
-                    <img class="list-active" src="./assets/images/now-playing/active-dot.png">
-                </div>
-                <img class="media-control remote" src="./assets/images/now-playing/remote.PNG" style="cursor: not-allowed;">
-                <div id="root__now-playing__media-control__volume-bar">
-                    <img class="volume-btn" src="./assets/images/now-playing/volume-big.PNG">
-                    <input id="root__now-playing__media-control__volume-bar__range-slider" min="0" max="100" type="range" value = "100"/>
-                </div>
-                <img class="media-control fullscreen" style="cursor: not-allowed;" src="./assets/images/now-playing/fullscreen.PNG">
-            </div>
-        </div>       
-    </div>  
-    <audio id="audio" src="" preload="metadata"></audio>
-    <script src="./assets/js/data_Song.js"></script>
-    <script src="./assets/js/main.js"></script>
+    </section>
+    <script src="/assets/js/login.js"></script>
 </body>
 </html>

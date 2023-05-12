@@ -1257,7 +1257,8 @@ const app = {
               //Đăng xuất tài khoản
               $('.js-logout').onclick = function() {
                 localStorage.removeItem('loggedIn')
-                window.location.reload()
+                window.location.assign('/index.html')
+                //window.location.reload()
                 // Perform logout operation here
                 console.log('User has logged out');
               }
